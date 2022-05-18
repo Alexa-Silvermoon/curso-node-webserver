@@ -1,8 +1,8 @@
 require('dotenv').config();//para usar con archivo .env
-const express = require('express')//el servidor
-const hbs = require('hbs')//handlebars
+const express = require('express');//el servidor
+const hbs = require('hbs');//handlebars
 
-const app = express()
+const app = express();
 //const port = 8080;
 const port = process.env.PORT; //port viene desde el archivo .env
 
@@ -16,22 +16,22 @@ app.use( express.static('public')); //mostrara index.html en el navegador
 
 app.get('/', (req, res) => {
     res.render('home', {
-        nombre: 'Christian Alexander Martinez Millan',
-        titulo: 'Curso de Node'
+        nombre: 'Alexander Millan',
+        titulo: 'WebServer Node'
     }); //renderisa y abre views home.hbs pero sin la extension .hbs
 });
 
 app.get('/generic', (req, res) => {
     res.render('generic', {
-        nombre: 'Christian Alexander Martinez Millan',
-        titulo: 'Curso de Node'
+        nombre: 'Alexander Millan',
+        titulo: 'WebServer Node'
     }); //renderisa y abre views generic.hbs pero sin la extension .hbs
 });
 
 app.get('/elements', (req, res) => {
     res.render('elements', {
-        nombre: 'Christian Alexander Martinez Millan',
-        titulo: 'Curso de Node'
+        nombre: 'Alexander Millan',
+        titulo: 'WebServer Node'
     }); //renderisa y abre views elements.hbs pero sin la extension .hbs
 });
 
